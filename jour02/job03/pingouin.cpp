@@ -21,12 +21,6 @@ pingouin::pingouin(const pingouin &p) : aquatique(p.vitesseDeNage), terrestre(p.
 
 pingouin::~pingouin() {
     std::cout << "Pingouin est mort" << std::endl;
-    for (std::vector<std::shared_ptr<pingouin>>::iterator it = vecteurPingouins.begin(); it != vecteurPingouins.end(); it++) {
-        if ((*it).get() == this) {
-            vecteurPingouins.erase(it);
-            break;
-        }
-    }
 }
 
 void pingouin::nage() {

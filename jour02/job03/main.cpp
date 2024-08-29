@@ -16,5 +16,9 @@ int main() {
         p->sePresenter();
     }
 
+    for (std::shared_ptr<pingouin> p : pingouin::vecteurPingouins) {
+        p.reset();
+    }
+
     return 0;
 }
